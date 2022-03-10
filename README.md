@@ -37,4 +37,4 @@ https://ellysecarter.github.io/black-mamba/
 ## Contributors
 * Ellyse Carter [@ellysecarter](https://github.com/ellysecarter)
 * Tianchou Gong [@GongTianchou](https://github.com/GongTianchou) 
-* Vishal Mangla [@o]() 
+* Vishal Mangla [@vishalmangla](https://github.com/vishalmangla) 
