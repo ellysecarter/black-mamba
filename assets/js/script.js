@@ -22,40 +22,8 @@ var formSubmitHandler = function (event){
 };
 
 var getPlayerStats = function (name){
-    //var apiUrl = 'https://api-nba-v1.p.rapidapi.com/players/statistics' + name + stats;
+
     
-    //fetch(apiUrl)   
-     //   .then(function(response){
-       //     if(response.ok){
-          //      console.log(response);
-              //  responsejson().then(function(data){
-                //    consolelog(data);
-                  //  displayname(data,name);
-               // });
-          //  } else{
-            //    alert('Error: '+ response.statusText);
-           // }
-     //   })
-     //   .catch(function(error){
-      //      alert('Unable to pull the data');
-      //  });
-//}
-      //fetch above practiced in acitvity, fetch below is copy from API-nba
-
-    fetch("https://api-nba-v1.p.rapidapi.com/players/statistics?season=2020&id=734", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
-		"x-rapidapi-key": "XxXxXxXxXxXxXxXxXxXxXxXx"
-	   }
-    })
-    .then(response => {
-	console.log(response);
-    })
-
-    .catch(err => {
-	console.log(err);
-    });
 
     var displayname = function(name, searchTerm){
         if(name.length === 0){
