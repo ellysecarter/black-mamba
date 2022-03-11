@@ -5,6 +5,14 @@
 ## Deployed application:
 https://ellysecarter.github.io/black-mamba/
 
+## User Story
+
+```
+AS A NBA fan
+I WANT an app that can search players' and game stats,
+SO THAT so that I can keep up with the latest NBA news.
+```
+
 ## Table of Contents
 * [Technologies used](#technologies-used)
 * [Features](#features)
@@ -20,6 +28,7 @@ https://ellysecarter.github.io/black-mamba/
 * Foundation
 * jQuery
 * [API-NBA](https://api-sports.io/documentation/nba/v2)
+* [GNews](https://gnews.io/)
 
 
 ## Features
