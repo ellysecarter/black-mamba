@@ -19,6 +19,7 @@ fetch("https://sportscore1.p.rapidapi.com/players/1/statistics?page=1", {
 var playerContainer = document.getElementById("results-container")
 var inputEl = document.getElementById("username");
 var submitbtn = document.getElementById('btn')
+var userArray = [];
 
 var formSubmitHandler = function (event){
     event.preventDefault();
@@ -49,5 +50,10 @@ var formSubmitHandler = function (event){
     }
     });
     
+    var user = inputEl.value.trim();
+    userArray.push(user);
+    localStorage.setItem("user",JSON.stringify(userArray));
 }
 submitbtn.addEventListener('click',formSubmitHandler);
+
+
