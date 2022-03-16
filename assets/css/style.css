@@ -13,9 +13,10 @@
   
 .hero {
     background-image: url("../images/bp-miller-jshW04uzun8-unsplash.jpeg");
-    background-position: center;
     background-size: cover;
-    background-size: 70%;
+
+    width: 100%;
+    background-position: 50%;
 }
 
   body {

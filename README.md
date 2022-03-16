@@ -1,6 +1,6 @@
 # black-mamba
 
-![screenshot](assets/images/screenshot2.png)
+![screenshot]()
 
 ## Deployed application:
 https://ellysecarter.github.io/black-mamba/
@@ -9,7 +9,7 @@ https://ellysecarter.github.io/black-mamba/
 
 ```
 AS A NBA fan
-I WANT an app that can search players' and game stats,
+I WANT an app that can search players' stats,
 SO THAT so that I can keep up with the latest NBA news.
 ```
 
