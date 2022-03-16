@@ -1,6 +1,6 @@
-# black-mamba
+# Black Mamba
 
-![screenshot](assets/images/screenshot.png)
+![screenshot](assets/images/screenshot2.png)
 
 ## Deployed application:
 https://ellysecarter.github.io/black-mamba/
@@ -41,7 +41,7 @@ SO THAT so that I can keep up with the latest NBA news.
 
 
 ## Stock images provided by:
-* [BP Miller](https://unsplash.com/photos/jshW04uzun8)
+* [Mike Von](https://unsplash.com/photos/Q-3AcRtqoqM)
 
 
 
