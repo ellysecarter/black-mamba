@@ -168,10 +168,22 @@
     background-color: var(--dark);
     padding: 2.5%;
     border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    font-size: 28px;
+    text-align: center;
   }
   
   .card-body {
     padding: 2.5%;
+  }
+
+  .recent-searches {
+    color: var(--primary);
+    background-color: var(--dark);
+    padding: 5.5%;
+    margin-top: 20%;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    font-size: 20px;
+    text-align: center;
   }
   
   /* FORM */

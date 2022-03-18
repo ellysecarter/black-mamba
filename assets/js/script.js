@@ -38,8 +38,8 @@ var formSubmitHandler = function (event){
         }
         
         for (var i = 0; i < maxlength; i++){
-        var newsName = document.createElement('h3');
-        var newsUrl = document.createElement('p')
+        var newsName = document.createElement('h4');
+        var newsUrl = document.createElement('a')
 
         newsName.textContent = data.articles[i].title;
         newsUrl.textContent = data.articles[i].url;
@@ -57,3 +57,30 @@ var formSubmitHandler = function (event){
 submitbtn.addEventListener('click',formSubmitHandler);
 // test test test
 
+
+
+// recent searches section
+var recentSearches = JSON.parse(localStorage.getItem("user"))
+var showSearch = document.getElementById("search-list")
+var clearBtn = document.getElementById("clear");
+
+function displaySearches() {
+    for (var i = 0; i < recentSearches.length; i++) {
+        var entries = document.createElement("li");
+        entries.textContent = recentSearches[i].user + " ---- ";
+
+        entries.setAttribute("style", "margin:auto; width:20%; ");
+        showSearch.appendChild(entries);
+    }
+
+}
+
+// clear recent search history from LS and remove from page
+clearBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    localStorage.clear("user", JSON.stringify(userArray));
+    document.getElementById("search-list").style.display = "none";
+    document.getElementById("clear").style.display = "none";
+    })
+
+displaySearches();
