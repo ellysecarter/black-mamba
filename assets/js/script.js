@@ -54,7 +54,7 @@ var formSubmitHandler = function (event){
     userArray.push(user);
     localStorage.setItem("user",JSON.stringify(userArray));
 }
-submitbtn.addEventListener('click',formSubmitHandler);
+submitbtn.addEventListener('clicgitk',formSubmitHandler);
 // test test test
 
 
@@ -67,7 +67,7 @@ var clearBtn = document.getElementById("clear");
 function displaySearches() {
     for (var i = 0; i < recentSearches.length; i++) {
         var entries = document.createElement("li");
-        entries.textContent = recentSearches[i].user + " ---- ";
+        entries.textContent = recentSearches[i] + " ---- ";
 
         entries.setAttribute("style", "margin:auto; width:20%; ");
         showSearch.appendChild(entries);
