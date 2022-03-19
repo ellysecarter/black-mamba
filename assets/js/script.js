@@ -1,5 +1,5 @@
 
-// nba stats api
+// nba stats api test test test test
 fetch("https://sportscore1.p.rapidapi.com/players/1/statistics?page=1", {
 	"method": "GET",
 	"headers": {
@@ -13,7 +13,7 @@ fetch("https://sportscore1.p.rapidapi.com/players/1/statistics?page=1", {
 .catch(err => {
 	console.error(err);
 });
-
+// test test test
 //sports news api
 
 var playerContainer = document.getElementById("results-container")
