@@ -25,6 +25,11 @@ var formSubmitHandler = function (event){
     event.preventDefault();
     
     var playerName = inputEl.value.trim();
+
+    if (username){
+        playerContainer.textContent = "";
+        inputEl.value = "";
+    }
     
     fetch('https://gnews.io/api/v4/search?q='+playerName+'&token=761d21cd3ee94c2d0b71ba65f6b3f22d')
     .then(function (response) {
@@ -55,6 +60,7 @@ var formSubmitHandler = function (event){
     localStorage.setItem("user",JSON.stringify(userArray));
 }
 submitbtn.addEventListener('click',formSubmitHandler);
+
 // test test test
 
 
@@ -67,7 +73,7 @@ var clearBtn = document.getElementById("clear");
 function displaySearches() {
     for (var i = 0; i < recentSearches.length; i++) {
         var entries = document.createElement("li");
-        entries.textContent = recentSearches[i].user + " ---- ";
+        entries.textContent = recentSearches[i] + " ---- ";
 
         entries.setAttribute("style", "margin:auto; width:20%; ");
         showSearch.appendChild(entries);
