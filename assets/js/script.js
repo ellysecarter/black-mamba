@@ -44,12 +44,7 @@ var formSubmitHandler = function (event){
     userArray.push(user);
     localStorage.setItem("user",JSON.stringify(userArray));
 }
-<<<<<<< HEAD
 submitbtn.addEventListener('clicgitk',formSubmitHandler);
-=======
-submitbtn.addEventListener('click',formSubmitHandler);
-
->>>>>>> ab92c2c208855a76ad0c113b44de23056ec227b8
 // test test test
 // nba stats api test test test test
 var statsContainer = document.getElementById("stats-container");
