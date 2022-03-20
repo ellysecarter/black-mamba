@@ -1,4 +1,52 @@
 
+//sports news api
+
+var playerContainer = document.getElementById("results-container")
+var inputEl = document.getElementById("username");
+var submitbtn = document.getElementById('btn');
+var userArray = [];
+
+var formSubmitHandler = function (event){
+    event.preventDefault();
+    
+    var playerName = inputEl.value.trim();
+
+    if (username){
+        playerContainer.textContent = "";
+        inputEl.value = "";
+    }
+    
+    fetch('https://gnews.io/api/v4/search?q='+playerName+'&token=761d21cd3ee94c2d0b71ba65f6b3f22d')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+        var maxlength = 5;
+        if(data.articles.length < 5){
+            maxlength = data.articles.length;
+        }
+        
+        for (var i = 0; i < maxlength; i++){
+        var newsName = document.createElement('h4');
+        var newsUrl = document.createElement('a')
+
+        newsName.textContent = data.articles[i].title;
+        newsUrl.textContent = data.articles[i].url;
+
+        playerContainer.append(newsName);
+        playerContainer.append(newsUrl);
+    
+    }
+    });
+    
+    var user = inputEl.value.trim();
+    userArray.push(user);
+    localStorage.setItem("user",JSON.stringify(userArray));
+}
+submitbtn.addEventListener('click',formSubmitHandler);
+
+// test test test
 // nba stats api test test test test
 var statsContainer = document.getElementById("stats-container");
 var statsInputEl = document.getElementById("username");
@@ -63,55 +111,6 @@ var statsSubmitHandler = function (event){
     }
 }
 statsSubmitBtn.addEventListener('click',statsSubmitHandler);
-// test test test
-//sports news api
-
-var playerContainer = document.getElementById("results-container")
-var inputEl = document.getElementById("username");
-var submitbtn = document.getElementById('btn');
-var userArray = [];
-
-var formSubmitHandler = function (event){
-    event.preventDefault();
-    
-    var playerName = inputEl.value.trim();
-
-    if (username){
-        playerContainer.textContent = "";
-        inputEl.value = "";
-    }
-    
-    fetch('https://gnews.io/api/v4/search?q='+playerName+'&token=761d21cd3ee94c2d0b71ba65f6b3f22d')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-        var maxlength = 5;
-        if(data.articles.length < 5){
-            maxlength = data.articles.length;
-        }
-        
-        for (var i = 0; i < maxlength; i++){
-        var newsName = document.createElement('h4');
-        var newsUrl = document.createElement('a')
-
-        newsName.textContent = data.articles[i].title;
-        newsUrl.textContent = data.articles[i].url;
-
-        playerContainer.append(newsName);
-        playerContainer.append(newsUrl);
-    
-    }
-    });
-    
-    var user = inputEl.value.trim();
-    userArray.push(user);
-    localStorage.setItem("user",JSON.stringify(userArray));
-}
-submitbtn.addEventListener('click',formSubmitHandler);
-
-// test test test
 
 
 
