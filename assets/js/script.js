@@ -1,7 +1,5 @@
-
-//sports news api
-
-var playerContainer = document.getElementById("results-container")
+var playerContainer = document.getElementById("results-container");
+var statsContainer = document.getElementById("stats-container");
 var inputEl = document.getElementById("username");
 var submitbtn = document.getElementById('btn');
 var userArray = [];
@@ -13,9 +11,10 @@ var formSubmitHandler = function (event){
 
     if (username){
         playerContainer.textContent = "";
+        statsContainer.textContent = "";
         inputEl.value = "";
     }
-    
+    //sports news api
     fetch('https://gnews.io/api/v4/search?q='+playerName+'&token=761d21cd3ee94c2d0b71ba65f6b3f22d')
     .then(function (response) {
         return response.json();
@@ -39,30 +38,8 @@ var formSubmitHandler = function (event){
     
     }
     });
-    
-    var user = inputEl.value.trim();
-    userArray.push(user);
-    localStorage.setItem("user",JSON.stringify(userArray));
-}
-submitbtn.addEventListener('click',formSubmitHandler);
-
-// test test test
-// nba stats api test test test test
-var statsContainer = document.getElementById("stats-container");
-var statsInputEl = document.getElementById("username");
-var statsSubmitBtn = document.getElementById('btn');
-
-var statsSubmitHandler = function (event){
-    event.preventDefault();
-
-    var stats = statsInputEl.value.trim();
-
-    if (username){
-        statsContainer.textContent = "";
-        inputEl.value = "";
-    }
-
-    fetch("https://free-nba.p.rapidapi.com/players?page=0&per_page=25&", {
+    // nba stats api test test test test test test test test test test test test test 
+    fetch("https://free-nba.p.rapidapi.com/search?q='+playerName+'?page=0&per_page=25&", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "free-nba.p.rapidapi.com",
@@ -79,8 +56,7 @@ var statsSubmitHandler = function (event){
     var maxlength = 3;
         if(data.length < 3){
             maxlength = data.length;
-        }
-        
+        } 
         for (var i = 0; i < maxlength; i++){
         var firstnName = document.createElement('h4');
         var lastName = document.createElement('h4');
@@ -109,10 +85,12 @@ var statsSubmitHandler = function (event){
         statsContainer.append(teamCity);
         statsContainer.append(teamConference);
     }
+  
+    var user = inputEl.value.trim();
+    userArray.push(user);
+    localStorage.setItem("user",JSON.stringify(userArray));
 }
-statsSubmitBtn.addEventListener('click',statsSubmitHandler);
-
-
+submitbtn.addEventListener('click',formSubmitHandler);
 
 // recent searches section
 var recentSearches = JSON.parse(localStorage.getItem("user"))
