@@ -38,8 +38,29 @@ var formSubmitHandler = function (event){
     
     }
     });
-    // nba stats api test test test test test test test test test test test test test 
-    fetch("https://free-nba.p.rapidapi.com/search?q='+playerName+'?page=0&per_page=25&", {
+    
+    var user = inputEl.value.trim();
+    userArray.push(user);
+    localStorage.setItem("user",JSON.stringify(userArray));
+}
+submitbtn.addEventListener('clicgitk',formSubmitHandler);
+// test test test
+// nba stats api test test test test
+var statsContainer = document.getElementById("stats-container");
+var statsInputEl = document.getElementById("username");
+var statsSubmitBtn = document.getElementById('btn');
+
+var statsSubmitHandler = function (event){
+    event.preventDefault();
+
+    var stats = statsInputEl.value.trim();
+
+    if (username){
+        statsContainer.textContent = "";
+        inputEl.value = "";
+    }
+
+    fetch("https://free-nba.p.rapidapi.com/players?page=0&per_page=25&", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "free-nba.p.rapidapi.com",
