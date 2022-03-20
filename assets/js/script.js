@@ -14,7 +14,7 @@ var formSubmitHandler = function (event){
         statsContainer.textContent = "";
         inputEl.value = "";
     }
-    //sports news api
+    //sports news api test test test
     fetch('https://gnews.io/api/v4/search?q='+playerName+'&token=761d21cd3ee94c2d0b71ba65f6b3f22d')
     .then(function (response) {
         return response.json();
